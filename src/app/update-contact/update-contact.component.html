@@ -1,0 +1,47 @@
+<div class="container">
+    <!-- heading with content -->
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center m-4">Update Details</h1>
+            <!-- <p style="text-align: justify;font-size: 20px; ">A contact management platform is a digitized address book where businesses
+                can store and organize contact information. Simple, yes, but important.
+                Disorganized or incomplete contact information causes massive headaches, delays, and missed
+                opportunities. Well-organized and accessible customer data, on the other hand, is easy to search,
+                up-to-date, and most importantly, scales sales performance.</p> -->
+        </div>
+    </div>
+    <!-- <pre>
+        {{contact | json}}
+    </pre> -->
+    <!-- <pre>
+        {{groups | json}}
+    </pre> -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- form -->
+            <div class="col-6">
+                <form class="border border-2 rounded p-3">
+                    <input [(ngModel)]="contact.name" name="Productname" type="text" placeholder="Enter Product Name" class="form-control mb-2" >
+                    <input [(ngModel)]="contact.price" name="Productprice" type="text" placeholder="Enter Product Email" class="form-control mb-2" >
+                    <input [(ngModel)]="contact.variant" name="Productvariant" type="text" placeholder="Enter Product Mobine Number" class="form-control mb-2" >
+                    <input [(ngModel)]="contact.photo" name="Productphoto" type="text" placeholder="Enter Product photo url" class="form-control mb-2" >
+                    <input [(ngModel)]="contact.company" name="Productcompany" type="text" placeholder="Enter Product Brand Name" class="form-control mb-2" >
+                    <!-- <input [(ngModel)]="contact.title" name="Producttitles" type="text" placeholder="Enter Product Title" class="form-control mb-2" > -->
+                   
+                    <!-- <select type="submit" [(ngModel)]="contact.groupId" name="groupid" class="form-control mb-2">
+                        <option value="" selected hidden disabled>Select</option>
+                        <option value="{{group.id}}" *ngFor="let group of groups">{{group.name}}</option>
+                       
+                    </select> -->
+                    <input (click)="updateContact()" type="submit" value="Update" class="btn btn-success mt-3">
+                    <a routerLink="/" class="btn btn-danger mt-3" style="float: right;">Close</a>
+                </form>
+            </div>
+            <div class="col-6">
+                <img class="img-icon ms-5" [src]="contact.photo" alt="" width="100%">
+
+            </div>
+        </div>
+    </div>
+</div>
+

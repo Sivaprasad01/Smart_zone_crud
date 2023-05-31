@@ -1,0 +1,52 @@
+{
+  "contacts": [
+    {
+      "id": "1",
+      "name": "Samsung Galaxy S22 Ultra",
+      "price": "1,29,999",
+      "variant": "12GB/256GB",
+      "photo": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/71Ntz1Yy4kL._SX679_.jpg",
+      "company": "SAMSUNG"
+    },
+    {
+      "id": "2",
+      "name": "Iphone 14 pro max",
+      "price": "1,49,999",
+      "variant": "12GB/256GB",
+      "photo": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/610pghkO81L._SX679_.jpg",
+      "company": "APPLE"
+    },
+    {
+      "id": "3",
+      "name": "Vivo V27",
+      "price": "49,999",
+      "variant": "8GB/256GB",
+      "photo": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/41aiTvsy6PL.jpg",
+      "company": "VIVO"
+    },
+    {
+      "id": "4",
+      "name": "Oppo Reno 6",
+      "price": "49,999",
+      "variant": "8GB/128GB",
+      "photo": "https://cdn.shopify.com/s/files/1/0598/7919/4823/products/71otei-O3-L._SS640.jpg?v=1659785583",
+      "company": "OPPO"
+    },
+    {
+      "id": "5",
+      "name": "Pixel 7 pro",
+      "price": "89,999",
+      "variant": "8GB/128GB",
+      "photo": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/71to9xkUHrL._SX679_.jpg",
+      "company": "GOOGLE"
+    },
+    {
+      "id": "6",
+      "name": "Redmi Note 12",
+      "price": "45,999",
+      "variant": "8GB/256GB",
+      "photo": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/41S+AYOw5VL._SY300_SX300_.jpg",
+      "company": "XIAOMI"
+    }
+  ]
+}

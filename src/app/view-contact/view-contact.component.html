@@ -1,0 +1,46 @@
+<div class="container">
+    <!-- heading with content -->
+    <div class="row">
+        <div class="col">
+            <!-- <h1 class="text-center m-4">View Your Contact</h1>
+            <p style="text-align: justify; font-size: 20px;">A contact management platform is a digitized address book where businesses
+                can store and organize contact information. Simple, yes, but important.
+                Disorganized or incomplete contact information causes massive headaches, delays, and missed
+                opportunities. Well-organized and accessible customer data, on the other hand, is easy to search,
+                up-to-date, and most importantly, scales sales performance.</p> -->
+        </div>
+    </div>
+    <div class="container ">
+        <div class="row">
+            <!-- form -->
+            <div class="col-6 mt-3">
+                <!-- <pre>
+                    {{groupId |json}}
+                </pre>
+                <pre>
+                    {{groupName |json}} 
+                </pre> -->
+                <ul class="list-group">
+                    <h1>Product Details</h1>
+                    <li class="list-group-item mb-2 border border-3">Model : {{contact.name}}
+                    </li>
+                    <li class="list-group-item mb-2 border border-3">Price : {{contact.price}}
+                    </li>
+                    <li class="list-group-item mb-2 border border-3">Variant : {{contact.variant}}
+                    </li>
+                    <li class="list-group-item mb-2 border border-3">Brand Name : {{contact.company}}
+                    </li>
+                    <!-- <li class="list-group-item mb-2 border border-3">Title : {{contact.title}}
+                    </li> -->
+                    <!-- <li class="list-group-item mb-2 border border-3">Group : {{groupName}}
+                    </li> -->
+                </ul>
+                <a routerLink="/" class="btn btn-primary my-3"><i class="fa-solid fa-arrow-left"></i>&nbsp;Go Back</a>
+            </div>
+            <div class="col-6">
+                <img class="img-icon ms-5" [src]="contact.photo" alt="" width="100%">
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,138 @@
+<!-- system date and time -->
+
+<!-- <p>Login Details: {{loginDate| date:'short'}}</p> -->
+<div class="wrapper">
+  <div class="slider">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="2000">
+          <img src="https://cdn-media.gumlet.io/pub/media/catalog/category/google-banner_1.jpg" class="d-block w-100"
+            alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="https://i.pinimg.com/originals/ea/bd/aa/eabdaadef69a169117a2900e77bfde9f.jpg" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img
+            src="https://www.apple.com/in/iphone-14/images/meta/iphone-14_overview__50yr9pd9hfm2_og.png?202305180126"
+            alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="https://www.nicepng.com/png/detail/870-8706206_samsung-mobile-banner-1-samsung-galaxy.png"
+            class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img
+            src="https://i.gadgets360cdn.com/large/vivo_v23_5g_launch_announcement_twitter_1640351572606.jpg?downsize=950:*"
+            class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+
+
+  <div class="row mt-2 ">
+    <div class="col-6 m-4" style="margin-top: 20px; width: 50%;">
+      <input (keyup)="search($event)" type="text" class="form-control" placeholder="Search for products">
+
+    </div>
+    <a routerLink="/contact/add" class="btn btn-dark fw-bolder " title="Add new contact"
+      style="float: right; margin-top: 20px; width: 500px;height: 40px;"><i class="fa-sharp fa-solid fa-user-plus"></i>&nbsp;Add Product</a>
+
+  </div>
+  <!-- <h2>{{heading}}</h2>
+    <pre>
+        {{allContacts | json}}
+    </pre> -->
+
+
+  <div class="container mt-5">
+    <div class="row ">
+      <div class="col-xs-12  col-lg-6" *ngFor="let contact of allContacts | filter:searchKey:'name'">
+        <div class="card mt-3 mb-5 ms-5" style="border-radius: 30px;">
+          <div class="card-body  p-5">
+            <div class="row ">
+              <div class="col-3 prodpic">
+
+                <!-- property binding -->
+                <img [src]="contact.photo"
+                  style="margin-bottom: 10px; margin-left: 90px;height: 200px;width: 200px; border-radius: 20px;"
+                  alt="">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-9">
+                <ul class="list-group" style="margin-left: 20px;width: 350px;">
+                  <li class="list-group-item mt-2" >Model:{{contact.name}}
+                    <a routerLink="/contact/view/{{contact.id}}" class="btn btn-success text-light " style="float:right"
+                      title="View Contact"><i class="fa-sharp fa-solid fa-eye"></i></a>
+                  </li>
+                  <li class="list-group-item" >Price:{{contact.price}}
+                    <a routerLink="/contact/update/{{contact.id}}" class="btn btn-primary text-light"
+                      style="float:right" title="Edit Contact"><i class="fa-sharp fa-solid fa-user-pen "></i></a>
+                  </li>
+                  <li class="list-group-item" >Variant:{{contact.variant}}
+                    <button (click)="deleteContact(contact.id)" style="float:right" class="btn btn-danger text-light"
+                      title="Delete Contact"><i class="fa-sharp fa-solid fa-trash"></i></button>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <footer class="bg-dark w-100 text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn text-white btn-floating m-1" style="background-color: #3b5998;" href="#!" role="button"><i
+            class="fab fa-facebook-f"></i></a>
+
+        <!-- Twitter -->
+        <a class="btn text-white btn-floating m-1" style="background-color: #55acee;" href="#!" role="button"><i
+            class="fab fa-twitter"></i></a>
+
+        <!-- Google -->
+        <a class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="#!" role="button"><i
+            class="fab fa-google"></i></a>
+
+        <!-- Instagram -->
+        <a class="btn text-white btn-floating m-1" style="background-color: #ac2bac;" href="#!" role="button"><i
+            class="fab fa-instagram"></i></a>
+
+        <!-- Linkedin -->
+        <a class="btn text-white btn-floating m-1" style="background-color: #0082ca;" href="#!" role="button"><i
+            class="fab fa-linkedin-in"></i></a>
+        <!-- Github -->
+        <a class="btn text-white btn-floating m-1" style="background-color: #333333;" href="#!" role="button"><i
+            class="fab fa-github"></i></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</div>
